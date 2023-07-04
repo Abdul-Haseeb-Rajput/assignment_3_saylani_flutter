@@ -7,13 +7,13 @@
 import 'dart:io';
 
 void main() {
-  print("enter numbers without spaces to check their sum: ");
-  String input = stdin.readLineSync()!;
-  List<int> myList = input.split('').map(int.parse).toList();
-
-  int sum = myList.reduce(
-    (value, element) => value + element,
-  );
-
-  print("The sum is of $myList is: $sum");
+  print("enter numbers without spaces to calculate thier sum: ");
+  int input = int.parse(stdin.readLineSync()!);
+  int reminder, sum = 0;
+  while (input > 0) {
+    reminder = input % 10;
+    sum += reminder;
+    input = input ~/ 10;
+  }
+  print(sum);
 }
