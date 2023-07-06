@@ -11,7 +11,7 @@
 import 'dart:io';
 
 void main() {
-  print("Enter number to find cube of the number up to an integer.")
+  print("Enter number to find cube of the number up to an integer.");
   int numberOfTerms = int.parse(stdin.readLineSync()!);
 
   for (int i = 1; i <= numberOfTerms; i++) {
